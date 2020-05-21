@@ -1,19 +1,17 @@
 package kr.co.yhw.androidbasic02;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 
-import kr.co.yhw.androidbasic02.databinding.ActivityMainBinding;
-import kr.co.yhw.androidbasic02.databinding.ActivityUserInfo2Binding;
+import kr.co.yhw.androidbasic02.databinding.ActivityUserInfoBinding;
 
 public class UserInfoActivity extends BaseActivity {
-    ActivityUserInfo2Binding binding;
+    ActivityUserInfoBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_user_info2);
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_user_info);
         setupValues();
         setupEvents();
     }
@@ -25,7 +23,9 @@ public class UserInfoActivity extends BaseActivity {
 
     @Override
     public void setupValues() {
-        binding.userNameEdt.setText("????");
+
+        String name = getIntent().getStringExtra("userName");
+        binding.userNameEdt.setText(name);
 
     }
 }

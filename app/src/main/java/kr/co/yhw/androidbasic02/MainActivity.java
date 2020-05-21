@@ -28,6 +28,7 @@ public class MainActivity extends BaseActivity {
                 String inputName = binding.nameEdt.getText().toString();
 
                 Intent intent = new Intent(mContext,UserInfoActivity.class);
+                intent.putExtra("userName",inputName);
                 startActivity(intent);
 
             }
