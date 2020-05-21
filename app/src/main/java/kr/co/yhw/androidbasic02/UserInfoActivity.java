@@ -19,13 +19,14 @@ public class UserInfoActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+
     }
 
     @Override
     public void setupValues() {
 
         String name = getIntent().getStringExtra("userName");
-        binding.userNameEdt.setText(name);
+        binding.userInfoTxtEdt.setText(name);
 
     }
 }

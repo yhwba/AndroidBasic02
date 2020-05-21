@@ -14,12 +14,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:hint="이름을 입력하십시오"/>
+            android:hint="이름을 입력하십시오."/>
+        <EditText
+            android:id="@+id/birthYearEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="생년를 입력하십시오.(ex.1992)"/>
         <Button
             android:id="@+id/okBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="다른 화면에서 입려한 이름 확인"/>
+            android:text="다른 화면에서 입력한 이름/나이 확인"/>
 
 
     </LinearLayout>
