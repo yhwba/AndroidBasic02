@@ -26,9 +26,11 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
 
                 String inputName = binding.nameEdt.getText().toString();
+                String inputbirthYear = binding.birthYearEdt.getText().toString();
 
                 Intent intent = new Intent(mContext,UserInfoActivity.class);
                 intent.putExtra("userName",inputName);
+                intent.putExtra("userBirthYear", Integer.parseInt(inputbirthYear));
                 startActivity(intent);
 
             }
