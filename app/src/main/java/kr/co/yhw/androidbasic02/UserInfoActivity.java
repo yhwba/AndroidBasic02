@@ -1,20 +1,17 @@
 package kr.co.yhw.androidbasic02;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 
-import kr.co.yhw.androidbasic02.databinding.ActivityMainBinding;
+public class UserInfoActivity extends BaseActivity {
 
-public class MainActivity extends BaseActivity {
-    ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-        setupEvents();
+        setContentView(R.layout.activity_user_info2);
         setupValues();
+        setupEvents();
     }
 
     @Override
